@@ -1,0 +1,75 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'hugo-astatine-theme'
+publishDir = 'docs'
+preserveTaxonomyNames = true
+15rssLimit = 10
+16paginate = 10
+17
+18# Code highlighting
+19pygmentsCodefences = true
+20pygmentsStyle = "native"
+21
+22# Taxonomies (only tags and categories are supported out of the box but you can
+23# add more)
+24[taxonomies]
+25    category = "categories"  
+26    tag = "tags"
+27
+28# Configure permalinks style
+29[permalinks]
+30    post = "/:slug/"
+31    page = "/:slug/"
+32
+33# Configure main navbar links. They can have a weight to select the order.
+34# This links to content within the content/post/ folder
+35[[menu.main]]
+36    name = "Posts"
+37    url = "/post/"
+38    weight = -150
+39
+40# This links to the page about.md
+41[[menu.main]]
+42    name = "About"
+43    url = "/about/"
+44    weight = -110
+45
+46# Make the tags and categories pages accessible directly from the navbar.
+47[[menu.main]]
+48    name = "Tags"
+49    url = "/tags/"
+50    weight = -120
+51
+52[[menu.main]]
+53    name = "Categories"
+54    url = "/categories/"
+55    weight = -130
+56
+57# Site wide params and SEO
+58[params]
+59    # Site description. Individual pages can have descriptions too but if
+60    # missing it will fallback to that one.
+61    description = """The homepage of Astatine. This website is a demo the of the \
+62    Hugo theme Astatine."""
+63    # Author of the site
+64    authorName = "Jack Harkness"
+65    # Main image for the author. This will be the default image for SEO.
+66    [params.imgname]
+67        name = "img/main.jpg"
+68        # Add an alt description for the image
+69        alt = "Profile picture"
+70
+71    # Indicate if you host Katex yourself. Defaults to using the CDN KaTex.
+72    # hostedKaTex = false
+73
+74    # Optional: add a twitter handle and mastodon handle for SEO.
+75    # [params.twitter]
+76        # name = "@Jack_harkness"
+77    # [params.mastodon]
+78        # name = "@jkharkness"
+79        # host = "mastodon.social"
+80
+81    # Enable link to feed in footer
+82    blogrss = true
+
